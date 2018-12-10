@@ -12,13 +12,13 @@ import javax.inject.Inject
 
 class Fragment2 : DaggerFragment() {
 
-//    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
+    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
     private lateinit var viewModel: ViewModel2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        viewModel = ViewModelProviders.of(this, viewModelFactory)[ViewModel2::class.java]
-//        viewModel.sayHello()
+        viewModel = ViewModelProviders.of(this, viewModelFactory)[ViewModel2::class.java]
+        viewModel.sayHello()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
