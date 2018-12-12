@@ -3,6 +3,7 @@ package com.leodroidcoder.mvvmdagger.mvvm;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.inject.Inject;
@@ -18,8 +19,9 @@ public class ViewModelFactory implements ViewModelProvider.Factory {
     private final Map<Class<? extends ViewModel>, Provider<ViewModel>> creators;
 
     @Inject
-    public ViewModelFactory(Map<Class<? extends ViewModel>, Provider<ViewModel>> creators) {
-        this.creators = creators;
+    public ViewModelFactory(/*Map<Class<? extends ViewModel>, Provider<ViewModel>> creators*/) {
+//        this.creators = creators;
+        this.creators =new HashMap<>();
     }
 
     @Override
