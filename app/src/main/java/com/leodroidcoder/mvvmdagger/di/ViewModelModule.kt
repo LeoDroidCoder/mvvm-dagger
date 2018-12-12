@@ -8,10 +8,14 @@ import com.leodroidcoder.mvvmdagger.mvvm.ViewModelFactory
 import com.leodroidcoder.mvvmdagger.mvvm.ViewModelKey
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import dagger.multibindings.IntoMap
+import javax.inject.Provider
 
 @Module
 abstract class ViewModelModule {
+
+
 
     @Binds
     abstract fun bindFactory(factory: ViewModelFactory): ViewModelProvider.Factory
